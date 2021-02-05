@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method="post" enctype="multipart/form-data" action="gerarPaciente">
+    {% csrf_token %}
+
+    <div>
+        Quantidade de Registro: <input name="numero" type="number" min="1" value="1" maxlength=3>
+        <input type="submit" value="Gerar Registros">
+    </div>
+
+    
+
+</form>
+
+{% endblock %}

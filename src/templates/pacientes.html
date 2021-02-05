@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Lista de Pacientes:</h1>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>NOME</th>
+            <th>DATA NASC</th>
+            <th>CPF</th>
+            <th>END</th>
+            <th>CEP</th>
+            <th>BAIRRO</th>
+            <th>CIDADE</th>
+            <th>UF</th>
+            <th>TEL</th>
+        </tr>
+
+        {% for pac in paciente %}
+            <tr>
+                <td>{{pac.id_paciente}}</td>
+                <td>{{pac.nome}}</td>
+                <td>{{pac.nasc}}</td>
+                <td>{{pac.cpf}}</td>
+                <td>{{pac.end}}</td>
+                <td>{{pac.cep}}</td>
+                <td>{{pac.bairro}}</td>
+                <td>{{pac.cidade}}</td>
+                <td>{{pac.uf}}</td>
+                <td>{{pac.tel}}</td>
+            </tr>
+        {% endfor %}
+
+    </table>
+
+{% endblock %}
